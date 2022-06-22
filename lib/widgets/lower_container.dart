@@ -9,6 +9,8 @@ import 'package:portfolio/widgets/info.dart';
 import 'package:portfolio/widgets/intrest.dart';
 import 'package:portfolio/widgets/skill_card.dart';
 
+import '../utils/size_adapter.dart';
+
 class LowerContainer extends StatelessWidget {
   final double width;
   final List<Map> intrests;
@@ -27,13 +29,14 @@ class LowerContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         width: width,
+        height: height,
         key: skillsKey,
         color: CustomColors.darkBackground,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(height: 50),
-            LayoutBuilder(builder: (context, constraints) {
+            /*LayoutBuilder(builder: (context, constraints) {
               if (constraints.maxWidth >= Breakpoints.lg) {
                 return Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -136,7 +139,7 @@ class LowerContainer extends StatelessWidget {
                   ],
                 );
               }
-            }),
+            }),*/
             SizedBox(
               height: width * 0.07,
             ),
@@ -149,7 +152,7 @@ class LowerContainer extends StatelessWidget {
             ),
             SizedBox(height: width * 0.03),
             // 820
-            LayoutBuilder(builder: (context, constraints) {
+            /*LayoutBuilder(builder: (context, constraints) {
               if (constraints.maxWidth >= Breakpoints.lg) {
                 return SizedBox(
                   width: width * 0.76,
@@ -215,7 +218,7 @@ class LowerContainer extends StatelessWidget {
                   ),
                 );
               }
-            }),
+            }),*/
             const SizedBox(height:10)
         
           ],

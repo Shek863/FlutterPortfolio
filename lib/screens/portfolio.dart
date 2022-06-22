@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:portfolio/utils/breakpoints.dart';
 import 'package:portfolio/utils/custom_colors.dart';
 import 'package:portfolio/widgets/footer.dart';
-import 'package:portfolio/widgets/lower_container.dart';
 import 'package:portfolio/widgets/upper_container.dart';
 import 'package:portfolio/widgets/nav_bar.dart';
 
@@ -102,7 +101,7 @@ class _PortfolioState extends State<Portfolio> {
               ),
           showFloatingButton),
       body: Container(
-        color: CustomColors.brightBackground,
+        color: CustomColors.darkBackground,
         width: width,
         child: SingleChildScrollView(
           controller: scrollController,
@@ -110,13 +109,13 @@ class _PortfolioState extends State<Portfolio> {
             children: [
               Column(
                 children: [
-                  const SizedBox(height: 130),
+                  const SizedBox(height: 135),
                   UpperContainer(width: width),
-                  LowerContainer(
+                  /* LowerContainer(
                       width: width,
                       intrests: intrests,
                       intrestsKey: intrestsKey,
-                      skillsKey: skillsKey),
+                      skillsKey: skillsKey),*/
                   Container(
                     width: width,
                     height: 0.1,

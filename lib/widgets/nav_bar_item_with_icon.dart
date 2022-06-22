@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/utils/custom_colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -17,13 +18,19 @@ class NavBarItemWithIcon extends StatelessWidget {
       style: ButtonStyle(
         elevation: MaterialStateProperty.all<double>(0),
         backgroundColor: MaterialStateProperty.all<Color>(
-            CustomColors.brightBackground),
+            CustomColors.nullBackground
+        ),
       ),
-      icon: Image.asset(icon),
+      icon: Image.asset(
+          icon,
+      width: 36, height: 36,
+      ),
       onPressed: () async {
         await launch(url);
       },
-      label: Text(text, style: const TextStyle(fontSize: 12)),
+      label: Text(text, style: const TextStyle(
+        color: CustomColors.darkBackground,
+          fontSize: 12)),
     );
   }
 }

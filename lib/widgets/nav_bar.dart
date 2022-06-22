@@ -40,40 +40,40 @@ class NavBar extends StatelessWidget {
         padding: EdgeInsets.only(left: width * 0.04),
         child: Logo(width: width,scrollController: scrollController,),
       ),
-      Row(
+      /*Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             NavBarItem(
-              text: 'Home',
+              text: 'About',
               onTap: () {},
             ),
             NavBarItem(
-                text: 'Skills', onTap: () => scrollToWidgetByKey(skillsKey)),
+                text: 'Skills', onTap: () => scrollToWidgetByKey(skillsKey) ),
             NavBarItem(
-              text: 'Intrests',
+              text: 'Works',
               onTap: () => scrollToWidgetByKey(intrestsKey),
             ),
             const SizedBox(width: 60),
-          ]),
+          ]),*/
       Row(mainAxisAlignment: MainAxisAlignment.end, children: [
         const SizedBox(width: 50),
         Row(children: const [
           NavBarItemWithIcon(
-            text: 'github',
-            icon: ImageAssetConstants.github,
-            url: 'https://github.com/khalid-alsaleh-dev',
+            text: 'Tweeter',
+            icon: ImageAssetConstants.twitter,
+            url: 'https://twitter.com/shek_draw',
           ),
-          SizedBox(width: 10),
+          SizedBox(width: 5),
           NavBarItemWithIcon(
-              text: 'facebook',
-              icon: ImageAssetConstants.facebook,
-              url: 'https://www.facebook.com/khalid.alsaleh.52090/'),
-          SizedBox(width: 10),
+              text: 'Github',
+              icon: ImageAssetConstants.github,
+              url: 'https://github.com/Shek863'),
+          SizedBox(width: 5),
           NavBarItemWithIcon(
-              text: 'linkedIn',
+              text: 'LinkedIn',
               icon: ImageAssetConstants.linkedIn,
-              url: 'https://www.linkedin.com/in/khalid-al-saleh-3561881a8/'),
+              url: 'https://www.linkedin.com/in/shek368/'),
           SizedBox(width: 50),
         ])
       ])
@@ -118,7 +118,7 @@ class NavBar extends StatelessWidget {
         ObxValue<RxDouble>(
             (data) => AnimatedContainer(
                   margin: const EdgeInsets.only(top: 110.0),
-                  duration: const Duration(milliseconds: 375),
+                  duration: const Duration(milliseconds: 1000),
                   curve: Curves.ease,
                   height: data.value,
                   width: double.infinity,

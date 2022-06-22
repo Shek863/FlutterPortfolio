@@ -15,11 +15,19 @@ class Logo extends StatelessWidget {
           scrollController.position.minScrollExtent,
           duration: const Duration(milliseconds: 700),
           curve: Curves.easeInOut),
-      child: MouseRegion(
+      child: const MouseRegion(
         cursor: SystemMouseCursors.click,
-        child: Image.asset(ImageAssetConstants.logo,
+        child:  Text(
+            "Sègun . ",
+            style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w700,
+                fontSize: 30
+            ) ),
+
+       /* Image.asset(ImageAssetConstants.logo,
             width: width >= Breakpoints.xlg ? width * 0.14 : Breakpoints.xlg * 0.14,
-            height: width >= Breakpoints.xlg ? 0.04 * width : 0.04 * Breakpoints.xlg),
+            height: width >= Breakpoints.xlg ? 0.04 * width : 0.04 * Breakpoints.xlg),*/
       ),
     );
   }

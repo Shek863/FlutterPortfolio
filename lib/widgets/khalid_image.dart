@@ -15,14 +15,15 @@ class KhalidImage extends StatelessWidget {
       alignment: Alignment.center,
       children: [
         Container(
-          constraints:const BoxConstraints(maxWidth:370),
+          constraints:const BoxConstraints(maxWidth:680),
           child: Image.asset(
-            ImageAssetConstants.khalid,
-            width: width * 0.29,
-            height: width * 0.3,
+            ImageAssetConstants.shegun,
+            fit: BoxFit.cover,
+            width: width * 0.26,
+            //height: width * 0.25,
           ),
         ),
-        Positioned(
+        /*Positioned(
           top: width * 0.17,
           left: 0,
           child: Image.asset(
@@ -30,8 +31,8 @@ class KhalidImage extends StatelessWidget {
             width: width * 0.07,
             height: width * 0.07,
           ),
-        ),
-        Positioned(
+        ),*/
+        /*Positioned(
           top: width * 0.19,
           right: width * 0.010,
           child: Image.asset(
@@ -39,8 +40,8 @@ class KhalidImage extends StatelessWidget {
             width: width * 0.083,
             height: width * 0.08,
           ),
-        ),
-        Positioned(
+        ),*/
+        /*Positioned(
           top: width * 0.06,
           right: width * 0.016,
           child: Image.asset(
@@ -48,7 +49,7 @@ class KhalidImage extends StatelessWidget {
             width: width * 0.06,
             height: width * 0.058,
           ),
-        ),
+        ),*/
         Positioned(
           top: width * 0.04,
           left: width * 0.025,

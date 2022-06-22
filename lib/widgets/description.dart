@@ -14,47 +14,70 @@ class Description extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: isVertical ? double.infinity : width * 0.29,
+      width: isVertical ? double.infinity : width * 0.34,
       child: Column(
-        crossAxisAlignment:
-            isVertical ? CrossAxisAlignment.center : CrossAxisAlignment.start,
+        crossAxisAlignment: isVertical ? CrossAxisAlignment.center : CrossAxisAlignment.start,
         children: [
-          Container(
-              margin: const EdgeInsets.symmetric(horizontal: 10),
-              width: 135,
-              height: 40,
-              alignment: Alignment.center,
-              color: CustomColors.primary,
-              child: Center(
-                  child: Text('Software Engineer',
-                      style: GoogleFonts.getFont('Days One',
-                          color: Colors.black, fontSize: 10)))),
-          SizedBox(height: 0.015 * width),
-          Text('Talk is cheap.',
+         // SizedBox(height: 0.015 * width),
+          Text('Full-Stack',
               style: GoogleFonts.getFont('Delius',
-                  color: Colors.white, fontSize: 30)),
-          const SizedBox(height: 5),
-          Text('Show me the code.',
+                  color: Colors.white, fontSize: 100)),
+          const SizedBox(height: 4),
+          Text('Developer.',
               style: GoogleFonts.getFont('Delius',
-                  color: Colors.white, fontSize: 30)),
-          const SizedBox(height: 20),
+                  color: Colors.white, fontSize: 100)),
+          const SizedBox(height: 45),
           SizedBox(
             width: isVertical ? double.infinity : width * 0.29,
             height: 90,
             child: AnimatedTextKit(
               repeatForever: true,
-              pause: const Duration(seconds: 2),
+              pause: const Duration(seconds: 1),
               animatedTexts: [
                 TyperAnimatedText(
-                    "I'm developing mobile,frontend and backend applications",
+                    "Hello! My name is Sègun Montcho",
                     textAlign: isVertical ? TextAlign.center : TextAlign.start,
                     textStyle: GoogleFonts.getFont('Delius',
                         color: CustomColors.gray,
-                        fontSize: 15)),
+                        fontSize: 22)),
+                TyperAnimatedText(
+                    "I'm currently working at",
+                    textAlign: isVertical ? TextAlign.center : TextAlign.start,
+                    textStyle: GoogleFonts.getFont('Delius',
+                        color: CustomColors.gray,
+                        fontSize: 22)),
+                TyperAnimatedText(
+                    "KKiaPay",
+                    textAlign: isVertical ? TextAlign.center : TextAlign.start,
+                    textStyle: GoogleFonts.getFont('Delius',
+                        color: CustomColors.kkiapay,
+                        fontSize: 26)),
+                TyperAnimatedText(
+                    "I'm developing mobile,frontend and backend applications with :",
+                    textAlign: isVertical ? TextAlign.center : TextAlign.start,
+                    textStyle: GoogleFonts.getFont('Delius',
+                        color: CustomColors.gray,
+                        fontSize: 22)),
+                TyperAnimatedText (
+                    "Java, Kotlin, dart, Java-script",
+                    textAlign: isVertical ? TextAlign.center : TextAlign.start,
+                    textStyle: GoogleFonts.getFont('Delius',
+                        color: CustomColors.purple,
+                        fontSize: 26)),
               ],
             ),
           ),
-          InkWell(
+          const SizedBox(height: 24),
+          Container(
+              margin: const EdgeInsets.symmetric(horizontal: 100),
+              width: 360,
+              height: 70,
+              alignment: Alignment.center,
+              color: CustomColors.primary,
+              child: Center( child: Text('Start a projet',
+                  style: GoogleFonts.getFont('Days One',
+                      color: Colors.black, fontSize: 18)))),
+        /*  InkWell(
             onTap: () async => !await launch(
                 'https://mail.google.com/mail/u/0/?fs=1&to=khalidlionel.2089@gmail.com&tf=cm'),
             child: Text("Let's chat",
@@ -62,7 +85,7 @@ class Description extends StatelessWidget {
                     decoration: TextDecoration.underline,
                     color: CustomColors.primary,
                     fontSize: 20)),
-          )
+          )*/
         ],
       ),
     );

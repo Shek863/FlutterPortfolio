@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/utils/breakpoints.dart';
 import 'package:portfolio/utils/custom_colors.dart';
+import 'package:portfolio/utils/image_asset_constants.dart';
 import 'package:portfolio/widgets/logo.dart';
 
 class Footer extends StatelessWidget {
@@ -12,19 +14,20 @@ class Footer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: CustomColors.darkBackground,
-        padding: const EdgeInsets.symmetric(vertical: 20),
+        color: Colors.black54,
+        padding: const EdgeInsets.symmetric(vertical: 30),
         width: width,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-             Logo(width: width,scrollController: scrollController,),
-             const SizedBox(height:22),
-          width > Breakpoints.sm
-            ? Row(
+            // Logo(width: width,scrollController: scrollController,),
+             //const SizedBox(height:26),
+
+             //const SizedBox(height:26),
+             width > Breakpoints.sm ? Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                   Text('Copyright © 2021 khalid-alsaleh-dev',
+                   Text('Copyright © 2022 shegun-montcho',
                       style: GoogleFonts.getFont('Delius',
                           color: CustomColors.gray,
                           fontSize: 14)),
@@ -32,32 +35,31 @@ class Footer extends StatelessWidget {
                       style: GoogleFonts.getFont('Delius',
                           color: CustomColors.gray,
                           fontSize: 14)),
-                  Text('khalidlionel.2089@gmail.com',
+                  Text('shekmontcho@gmail.com',
                       style: GoogleFonts.getFont('Delius',
                           color: CustomColors.gray,
-                          fontSize: 14)),
+                          fontSize: 14) ),
                 ],
-              )
-            : Column(
+              ) : Column(
                 children: [
-                  Text('Copyright © 2021 khalid-alsaleh-dev',
-                      style: GoogleFonts.getFont('Delius',
-                          color: CustomColors.gray,
-                          fontSize: 14)),
-                          const SizedBox(height: 10),
-                          Text(' All rights reserved',
+                  Text('Copyright © 2022 shegun-montcho',
                       style: GoogleFonts.getFont('Delius',
                           color: CustomColors.gray,
                           fontSize: 14)),
                   const SizedBox(height: 10),
-                  Text('khalidlionel.2089@gmail.com',
+                  Text('All rights reserved',
                       style: GoogleFonts.getFont('Delius',
                           color: CustomColors.gray,
                           fontSize: 14)),
+                  const SizedBox(height: 10),
+                  Text('shekmontcho@gmail.com',
+                      style: GoogleFonts.getFont('Delius',
+                          color: CustomColors.gray,
+                          fontSize: 14) ),
                 ],
               ),
-             
-        ],)
+             //Suivez nous sur :
+          ],)
               );
   }
 }

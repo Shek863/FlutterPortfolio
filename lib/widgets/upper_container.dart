@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/utils/breakpoints.dart';
 import 'package:portfolio/utils/custom_colors.dart';
+import 'package:portfolio/utils/size_adapter.dart';
 import 'package:portfolio/widgets/description.dart';
 import 'package:portfolio/widgets/khalid_image.dart';
 
@@ -13,21 +14,21 @@ class UpperContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: width,
-      color: CustomColors.brightBackground,
-      padding: const EdgeInsets.only(bottom:20),
+      color: CustomColors.darkBackground,
+      padding: const EdgeInsets.only(bottom:50),
       child: LayoutBuilder(builder: (context, consraints) {
         if (consraints.maxWidth >= Breakpoints.lg) {
           return Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              SizedBox(width: width * 0.02),
+              SizedBox( width: width * 0.02 ),
               Description(
                 isVertical: false,
                 width: width,
               ),
               const SizedBox(width: 20),
               KhalidImage(
-                width: width,
+                width: width*1.5,
               )
             ],
           );
