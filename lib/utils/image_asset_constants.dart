@@ -12,6 +12,11 @@ class ImageAssetConstants{
   static const String khalid='assets/images/khalid.png';
   static const String shegun='assets/images/shegun.png';
   static const String backendIcon='assets/images/backend_icon.png';
-  static const String telegram='assets/svg/ic_telegram.svg';
-  static const String instagram='assets/svg/ic_instagram.svg';
+  static const String telegram ='assets/svg/ic_telegram.svg';
+  static const String instagram = 'assets/svg/ic_instagram.svg';
+  static const String logoKYWA = 'assets/images/logo_kywa.png';
+  static const String logoEMonitor = 'assets/images/logo_emoniteur.png';
+  static const String logoKkiapay = 'assets/images/logo_kkiapay.png';
+  static const String logoSecours = 'assets/images/logo_secours.png';
+  static const String logoC24 = 'assets/images/logo_c24.png';
 }

@@ -9,6 +9,8 @@ import 'package:portfolio/widgets/nav_bar_item.dart';
 import 'package:portfolio/widgets/nav_bar_item_with_icon.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../utils/size_adapter.dart';
+
 class NavBar extends StatelessWidget {
   final double width;
   final GlobalKey intrestsKey;
@@ -35,7 +37,8 @@ class NavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget navBarRow = Stack(children: [
+    Ux().init(context, 300, 710);
+    Widget navBarRow = Stack( children: [
       Padding(
         padding: EdgeInsets.only(left: width * 0.04),
         child: Logo(width: width,scrollController: scrollController,),
@@ -58,28 +61,28 @@ class NavBar extends StatelessWidget {
           ]),*/
       Row(mainAxisAlignment: MainAxisAlignment.end, children: [
         const SizedBox(width: 50),
-        Row(children: const [
-          NavBarItemWithIcon(
-            text: 'Tweeter',
+        Row(children: [
+          const NavBarItemWithIcon(
+            text: '',
             icon: ImageAssetConstants.twitter,
             url: 'https://twitter.com/shek_draw',
           ),
-          SizedBox(width: 5),
-          NavBarItemWithIcon(
-              text: 'Github',
+          SizedBox(width:  w(14) ),
+          const NavBarItemWithIcon(
+              text: '',
               icon: ImageAssetConstants.github,
               url: 'https://github.com/Shek863'),
-          SizedBox(width: 5),
-          NavBarItemWithIcon(
-              text: 'LinkedIn',
+          SizedBox(width: w(14) ),
+          const NavBarItemWithIcon(
+              text: '',
               icon: ImageAssetConstants.linkedIn,
               url: 'https://www.linkedin.com/in/shek368/'),
-          SizedBox(width: 50),
+          SizedBox(width: w(14) ),
         ])
       ])
     ]);
     List<Widget>? navBarColumn = [
-      NavBarItem(
+      /*NavBarItem(
           text: 'Home',
           onTap: () {
             collapsableHeight.value = 0.0;
@@ -98,7 +101,7 @@ class NavBar extends StatelessWidget {
           onTap: () {
             scrollToWidgetByKey(intrestsKey);
             collapsableHeight.value = 0.0;
-          }),
+          }),*/
       NavBarItem(
           text: 'github',
           onTap: () async {
@@ -136,8 +139,7 @@ class NavBar extends StatelessWidget {
           height: 80.0,
           margin: const EdgeInsets.only(top: 40.0),
           padding: const EdgeInsets.symmetric(horizontal: 24.0),
-          child: (width < Breakpoints.xlg)
-              ? Row(
+          child: /*(width < Breakpoints.xlg) ? Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Padding(
@@ -153,8 +155,7 @@ class NavBar extends StatelessWidget {
                         },
                         width: width),
                   ],
-                )
-              : navBarRow,
+                ) :*/ navBarRow,
         ),
       ],
     );

@@ -18,19 +18,19 @@ class StartupView extends StatelessWidget {
       onModelReady: (model) => model.navigateToNextView(context),
       builder: (context, model, child) => Scaffold(
         body: Container(
-            color: CustomColors.brightBackground,
+            color: model.bg,
             width: width,
             height: height,
             child: Center(
               child: AnimatedTextKit(
                 repeatForever: false,
                 totalRepeatCount: 1,
-                pause: const Duration(milliseconds: 500),
+                pause: const Duration(milliseconds: 250),
                 animatedTexts: [
                   TyperAnimatedText(
                       "Shègun ",
                       textStyle:  TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                           fontWeight: FontWeight.w200,
                           fontSize: s(42)
                       ) ),

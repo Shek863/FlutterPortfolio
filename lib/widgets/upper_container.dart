@@ -12,6 +12,7 @@ class UpperContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Ux().init(context, 300, 710);
     return Container(
       width: width,
       color: CustomColors.darkBackground,
@@ -21,7 +22,7 @@ class UpperContainer extends StatelessWidget {
           return Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              SizedBox( width: width * 0.02 ),
+              SizedBox( width: width * (0.02) ),
               Description(
                 isVertical: false,
                 width: width,

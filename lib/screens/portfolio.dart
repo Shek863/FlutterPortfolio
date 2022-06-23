@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:portfolio/utils/breakpoints.dart';
 import 'package:portfolio/utils/custom_colors.dart';
+import 'package:portfolio/utils/size_adapter.dart';
 import 'package:portfolio/widgets/footer.dart';
 import 'package:portfolio/widgets/upper_container.dart';
 import 'package:portfolio/widgets/nav_bar.dart';
@@ -85,7 +86,7 @@ class _PortfolioState extends State<Portfolio> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-
+    double height = MediaQuery.of(context).size.height;
     return Scaffold(
       floatingActionButton: ObxValue<RxBool>(
           (data) => Visibility(
@@ -103,6 +104,7 @@ class _PortfolioState extends State<Portfolio> {
       body: Container(
         color: CustomColors.darkBackground,
         width: width,
+        height: height,
         child: SingleChildScrollView(
           controller: scrollController,
           child: Stack(
@@ -110,6 +112,7 @@ class _PortfolioState extends State<Portfolio> {
               Column(
                 children: [
                   const SizedBox(height: 135),
+                 // UpperContainer(width: width),
                   UpperContainer(width: width),
                   /* LowerContainer(
                       width: width,
